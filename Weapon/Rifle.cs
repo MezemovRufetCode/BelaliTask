@@ -41,16 +41,16 @@ namespace Weapon
   
         public void Shot()
         {
-            for (int i = 0; i < Ammo; i++)
+            for (int i = 1; i <= Ammo; i++)
             {
                 if (Ammo < Magazine)
                 {
                     Console.WriteLine("U don't have enought ammo.");
                     break;
                 }
-                if (i == Magazine && Magazine>=UAmmo)
+                if (i == Magazine && Magazine>UAmmo)
                 {
-                    Ammo -= Magazine - (Magazine - UAmmo);
+                    Ammo -= (Magazine - (Magazine-UAmmo));
                 }
                 
             }
