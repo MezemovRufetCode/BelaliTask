@@ -48,7 +48,7 @@ namespace Weapon
                     Console.WriteLine("U don't have enought ammo.");
                     break;
                 }
-                if (i == Magazine && Magazine>UAmmo)
+                if (i == Magazine && Magazine>=UAmmo)
                 {
                     Ammo -= Magazine - (Magazine - UAmmo);
                 }
