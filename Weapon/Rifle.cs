@@ -43,15 +43,16 @@ namespace Weapon
         {
             for (int i = 0; i < Ammo; i++)
             {
-                if (i == Magazine && Magazine>UAmmo)
-                {
-                    Ammo -= Magazine - (Magazine - UAmmo);
-                }
                 if (Ammo < Magazine)
                 {
                     Console.WriteLine("U don't have enought ammo.");
                     break;
                 }
+                if (i == Magazine && Magazine>UAmmo)
+                {
+                    Ammo -= Magazine - (Magazine - UAmmo);
+                }
+                
             }
            
             Console.WriteLine($"Total ammo : {Ammo}");
